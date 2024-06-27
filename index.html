@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Invers Matriks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1>Kalkulator Invers Matriks</h1>
+
+    <div class="input-section">
+      <label for="metode-input">1. Pilih Metode Input:</label>
+      <select id="metode-input">
+        <option value="manual">Input Manual</option>
+        <option value="file">Upload File</option>
+      </select>
+    </div>
+
+    <div id="input-manual" class="input-section">
+      <label for="ukuran">2a. Ukuran Matriks (n x n):</label>
+      <input type="number" id="ukuran" min="2" value="2">
+      <div class="instructions">Masukkan ukuran matriks (misal: untuk matriks 2x2, masukkan 2).</div>
+
+      <label for="matriks-input">2b. Elemen Matriks:</label>
+      <div class="instructions">Masukkan elemen matriks:</div>
+      <div id="matriks-input"></div>
+    </div>
+
+    <div id="input-file" class="input-section" style="display: none;">
+      <label for="upload-file">2. Upload File Matriks (.txt):</label>
+      <input type="file" id="upload-file" accept=".txt">
+      <div class="instructions">
+        Pastikan format file .txt benar:
+        <ul>
+          <li>Setiap baris mewakili satu baris matriks.</li>
+          <li>Elemen matriks dalam satu baris dipisahkan oleh spasi.</li>
+        </ul>
+      </div>
+    </div>
+
+    <button id="hitung">Hitung Invers</button>
+
+    <div id="hasil"></div>
+  </div>
+
+  <div class="watermark">
+    Aplikasi ini dibuat oleh Wisnu Hidayat dengan NIM 231240001422 untuk memenuhi tugas UAS Aljabar.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
